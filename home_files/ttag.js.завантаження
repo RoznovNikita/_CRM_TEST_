@@ -1,0 +1,37 @@
+smi2TagTracker = {
+    track: function(env) {
+        if(typeof(env) == "undefined") { env = {}; }
+
+        // send some miscellaneous info about the request
+        // env.u = document.location.href;
+        env.bw = window.innerWidth;
+        env.bh = window.innerHeight;
+
+
+        if(document.referrer && document.referrer != "") {
+            env.ref = document.referrer;
+        }
+
+        env.rnd = Math.floor(Math.random() * 10e12);
+
+        var params = [];
+        for(var key in env) {
+            if(env.hasOwnProperty(key)) {
+                params.push(encodeURIComponent(key) + "=" + encodeURIComponent(env[key]));
+            }
+        }
+
+        var img = new Image();
+        img.width=1;
+        img.height=1;
+        img.src = '//target.smi2.net/init/?' + params.join('&');
+
+    }
+};
+
+if(typeof(smi2TagTrackerSend) == "undefined") {
+    var smi2TagTrackerSend=1;
+    if(typeof(ttagsmi2_data) == "undefined") { ttagsmi2_data = {}; }
+    smi2TagTracker.track(ttagsmi2_data);
+
+}

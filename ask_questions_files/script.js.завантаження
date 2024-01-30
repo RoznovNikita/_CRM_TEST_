@@ -1,0 +1,189 @@
+$(document).ready(function() {
+
+    var body = $('body');
+    if (body.hasClass('main')) {
+        $(".main_link").addClass('active');
+    } 
+    else if (body.hasClass('projects')) {
+        $(".project_link").addClass('active');
+    }
+    else if (body.hasClass('about')) {
+    	$(".about_link").addClass('active');
+    } 
+    else if (body.hasClass('answer')) {
+    	$(".answer_link").addClass('active');
+    } 
+    else if (body.hasClass('cabinet')) {
+    	$(".cabinet_link").addClass('active');
+    } 
+    else if (body.hasClass('help')) {
+    	$(".help_link").addClass('active');
+    }
+    else if (body.hasClass('license')) {
+    	$(".license_link").addClass('active');
+    }
+    
+    window.onscroll = function() { myFunction() };
+    var header = document.getElementById("header");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+
+    $(".hamburger").click(function() {
+        $('.mob-replenish').toggleClass('d-none');
+        $(".nav_over").toggleClass("ham_active");
+    });
+
+    var $js_sum_range = $(".js-sum-range");
+    var $amount = $("#amount");
+    var instance_sum;
+    var min_sum = 10000;
+    var max_sum = 5000000;
+    $(".js-sum-range").ionRangeSlider({
+        skin: "round",
+        prettify: true,
+        min: min_sum,
+        max: max_sum,
+        from: 750000,
+        hide_min_max: true,
+        hide_from_to: true,
+        onStart: function(data) {
+            $amount.prop("value", data.from);
+            $("#amount").val(data.from + ' KZT');
+            $("#income").val((15 * data.from * 0.87 * ($("#term").val()).match(/\d+/)[0] / 1200).toFixed(2) + ' KZT');
+        },
+        onChange: function(data) {
+            $amount.prop("value", data.from);
+            $("#amount").val(data.from + ' KZT');
+            $("#income").val((15 * data.from * 0.87 * ($("#term").val()).match(/\d+/)[0] / 1200).toFixed(2) + ' KZT');
+        },
+    });
+    instance_sum = $js_sum_range.data("ionRangeSlider");
+    $amount.on("input", function() {
+        var val = $(this).prop("value");
+        if (val < min_sum) {
+            val = min_sum;
+        } else if (val > max_sum) {
+            val = max_sum;
+        }
+        instance_sum.update({
+            from: val
+        });
+        $("#income").val((15 * ($("#amount").val().match(/\d+/)[0] * 0.87 * $("#term").val().match(/\d+/)[0] / 1200)).toFixed(2) + ' KZT');
+    });
+    $("#amount").focusout(function(event) {
+        var value = $(this).val();
+        if ((value !== '') && (value.indexOf('.') === -1)) {
+
+            $(this).val(Math.max(Math.min(value, 5000000), 10000));
+        }
+        instance_sum.update({
+            from: $(this).prop("value")
+        });
+        $("#amount").val($(this).val() + ' KZT');
+        $("#income").val((15 * ($("#amount").val().match(/\d+/)[0] * 0.87 * $("#term").val().match(/\d+/)[0] / 1200)).toFixed(2) + ' KZT');
+    });
+    var $js_month_range = $(".js-month-range");
+    var $term = $("#term");
+    var instance_month;
+    var min_month = 1;
+    var max_month = 9;
+    $(".js-month-range").ionRangeSlider({
+        skin: "round",
+        prettify: true,
+        min: min_month,
+        max: max_month,
+        from: 3,
+        hide_min_max: true,
+        hide_from_to: true,
+        onStart: function(data) {
+            $term.prop("value", data.from);
+            $("#term").val(data.from + ' ' + declOfNum(data.from, ['месяц', 'месяца', 'месяцев']));
+            $("#income").val((15 * ($("#amount").val()).match(/\d+/)[0] * 0.87 * data.from / 1200).toFixed(2) + ' KZT');
+        },
+        onChange: function(data) {
+            $term.prop("value", data.from);
+            $("#term").val(data.from + ' ' + declOfNum(data.from, ['месяц', 'месяца', 'месяцев']));
+            $("#income").val((15 * ($("#amount").val()).match(/\d+/)[0] * 0.87 * data.from / 1200).toFixed(2) + ' KZT');
+        },
+    });
+    instance_month = $js_month_range.data("ionRangeSlider");
+    $term.on("input", function() {
+        var val = $(this).prop("value");
+        if (val < min_month) {
+            val = min_month;
+        } else if (val > max_month) {
+            val = max_month;
+        }
+        instance_month.update({
+            from: val
+        });
+        $("#income").val((15 * ($("#amount").val().match(/\d+/)[0] * 0.87 * $("#term").val().match(/\d+/)[0] / 1200)).toFixed(2) + ' KZT');
+    });
+    $("#term").focusout(function(event) {
+        var value = $(this).val();
+        if ((value !== '') && (value.indexOf('.') === -1)) {
+
+            $(this).val(Math.max(Math.min(value, 9), 1));
+        }
+        instance_month.update({
+            from: $(this).prop("value")
+        });
+        $("#term").val($(this).val() + ' ' + declOfNum($(this).val(), ['месяц', 'месяца', 'месяцев']));
+        $("#income").val((15 * ($("#amount").val().match(/\d+/)[0] * 0.87 * $("#term").val().match(/\d+/)[0] / 1200)).toFixed(2) + ' KZT');
+    });
+    $("#amount").click(function() {
+        $("#amount").val($("#amount").val().match(/\d+/)[0]);
+    });
+    $("#term").click(function() {
+        $("#term").val($("#term").val().match(/\d+/)[0]);
+    });
+    (function($) {
+        $.fn.inputFilter = function(inputFilter) {
+            return this.on("input keydown keyup", function() {
+                if (inputFilter(this.value)) {
+                    this.oldValue = this.value;
+                    this.oldSelectionStart = this.selectionStart;
+                    this.oldSelectionEnd = this.selectionEnd;
+                } else if (this.hasOwnProperty("oldValue")) {
+                    this.value = this.oldValue;
+                    this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                } else {
+                    this.value = "";
+                }
+            });
+        };
+    }(jQuery));
+    $("#amount").inputFilter(function(value) {
+        return /^\d*$/.test(value);
+    });
+    $("#term").inputFilter(function(value) {
+        return /^\d*$/.test(value);
+    });
+
+    function declOfNum(n, text_forms) {
+        n = Math.abs(n) % 100;
+        var n1 = n % 10;
+        if (n > 10 && n < 20) { return text_forms[2]; }
+        if (n1 > 1 && n1 < 5) { return text_forms[1]; }
+        if (n1 == 1) { return text_forms[0]; }
+        return text_forms[2];
+    }
+
+    $('.faq__items .question').click(function() {
+        $(this).next('.answer').slideToggle();
+        $(this).toggleClass('opened');
+        return false;
+    });
+    $('.top-five .question').click(function() {
+        $(this).find('.answer').slideToggle();
+        $(this).toggleClass('opened');
+        return false;
+    });
+});

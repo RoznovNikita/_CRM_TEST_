@@ -1,0 +1,160 @@
+/**
+ * Paths
+ */
+/**
+ * GraphikCy
+ */
+/**
+ * Kazimir
+ */
+/**
+ * PTSerif
+ */
+/**
+ * PTMono
+ */
+/**
+ * GraphikCy
+ */
+@font-face {
+  font-family: 'GraphikCy-Light';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Light.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Light.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Regular.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy-Medium';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Medium.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Medium.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy-Semibold';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Semibold.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Semibold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Semibold.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Bold.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy-Black';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Black.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/GraphikRBCLC/GraphikRBCLC-Black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/**
+ * Kazimir
+ */
+@font-face {
+  font-family: 'Kazimir';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Regular.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kazimir';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Regular-Italic.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Regular-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kazimir-Medium';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Medium.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kazimir-Semibold';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Semibold.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Semibold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kazimir-Semibold-Italic';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Semibold-Italic.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Semibold-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kazimir';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Bold.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kazimir-Black';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Black.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/KazimirTextRBC/KazimirTextRBC-Black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/**
+ * PTSerif
+ */
+@font-face {
+  font-family: 'PTSerif';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/PTSerif/PTSerif-Regular-Italic.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/PTSerif/PTSerif-Regular-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PTSerif';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/PTSerif/PTSerif-Bold.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/PTSerif/PTSerif-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+/**
+ * PTMono
+ */
+@font-face {
+  font-family: 'PTMono';
+  src: url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/PTMono/PTMono-Regular.woff2') format('woff2'), url('//s.rbk.ru/v10_rbcnews_static/common/common-10.10.114/fonts/PTMono/PTMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

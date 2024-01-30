@@ -1,0 +1,5 @@
+(function() {
+    var script = document.createElement('script');
+    script.src = 'https://r.mradx.net/img/C2/3BFC83.js';
+    document.getElementsByTagName('head')[0].appendChild(script);
+})();
